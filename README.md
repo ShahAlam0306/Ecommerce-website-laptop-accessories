@@ -10,7 +10,7 @@
 
 ---
 
-## 🧩 Features![Uploading website_ss_1.png…]()
+## 🧩 Features:
 
 
 - 🎯 Homepage showcasing top brands and products
