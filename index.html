@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Accessories Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+
+
+            <div class="logo">
+                <h2><a href> Welcome to The RAYEEN'S Store</a></h2>
+
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#other-accessories">Accessories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                    <li>
+                        <div class="cart-container">
+                            <a href="cart.html">Cart </a>
+                            
+                                <span id="cart-count">0</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <div class="banner-container">
+            <div class="banner-scroll">
+                <img src="assets1/electronics-banner-1.jpg" alt="Banner 1">
+                <img src="assets1/electronics-banner-2.jpg" alt="Banner 2">
+                <img src="assets1/electronics-banner-1.jpg" alt="banner 1">
+            </div>
+        </div>
+
+        <div class="container">
+            <aside class="sidebar">
+                <h2>Brands</h2>
+                <ul>
+                    <li><a href="#logitech">Logitech</a></li>
+                    <li><a href="#zerbonics">Zerbonics</li>
+                    <li><a href="#ant esports">Ant esports</a></li>
+                    <li><a href="#asus">Asus</a></li>
+                    <li><a href="#razer">Razer</a></li>
+                </ul>
+                <h2>Best Selling Brands</h2>
+                <ul class="brand-list">
+                    <li>
+                        <span class="toggle" onclick="toggleAvailability('logitech')">➕</span><img
+                            src="assets1/images/keyboard/logitech.png" width="80px">
+                        <ul id="logitech" class="availability">
+                            <li>Mice: 20 Available</li>
+                            <li>Keyboards: 15 Available</li>
+
+                            <li>Headsets: 5 Available</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="toggle" onclick="toggleAvailability('hp')">➕</span><img
+                            src="assets1/images/keyboard/ant_esports.png" width="80px" align="center">
+                        <ul id="hp" class="availability">
+                            <li>Laptops: 25 Available</li>
+
+                            <li>Accessories: 5 Available</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="toggle" onclick="toggleAvailability('dell')">➕</span><img
+                            src="assets1/images/keyboard/zerbonics.png" width="80px">
+                        <ul id="dell" class="availability">
+                            <li>Laptops: 20 Available</li>
+
+                            <li>Accessories: 5 Available</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="toggle" onclick="toggleAvailability('asus')" width="80px"
+                            align="center">➕</span><img src="assets1/asus.png" width="80px"> Asus
+                        <ul id="asus" class="availability">
+                            <li>Laptops: 15 Available</li>
+                            <li>Monitors: 10 Available</li>
+                            <li>Accessories: 5 Available</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="toggle" onclick="toggleAvailability('razer')">➕</span><img
+                            src="assets1/images/razer.png" width="80px"> Razer
+                        <ul id="razer" class="availability">
+                            <li>Mice: 10 Available</li>
+                            <li>Keyboards: 10 Available</li>
+                            <li>Headsets: 5 Available</li>
+                        </ul>
+                    </li>
+                </ul>
+                <aside class="sidebar">
+                    <h3>Small Accessories</h3>
+                    <div class="accessories-container">
+                        <div class="accessory" data-id="11" data-name="USB-PORTS" data-price="10">
+                            <img src="assets1/images/usb_ports.jpg" alt="USB-PORTS" width="90px">
+                            <p>USB Drive $10</p>
+                            <button onclick="addToCart(11,'USB-PORTS',10,'assets1/images/usb_ports.jpg')">Add to cart</button>
+
+                        </div>
+                        <div class="accessory" data-id="12" data-name="Mouse Pad" data-price="8">
+                            <img src="assets1/images/mousepad.jpg" alt="Mouse Pad" width="90px">
+                            <p>Mouse Pad $8</p>
+                            <button onclick="addToCart(12,'Mouse Pad',8,'assets1/images/mousepad.jpg')">Add to cart</button>
+
+                        </div>
+                        <div class="accessory" data-id="13" data-name="Earphones" data-price="15">
+                            <img src="assets1/images/earphones.jpg" alt="Earphones" width="90px">
+                            <p>Earphones $15</p>
+                            <button onclick="addToCart(13,'Earphones',15,'assets1/images/earphones.jpg')">Add to cart</button>
+
+                        </div>
+                    </div>
+                </aside>
+
+
+            </aside>
+            <section id="products">
+                <h2 align="center">Shop by Brand</h2>
+                <h3 id="logitech" align="center">Logitech</h3>
+                <div class="product-container">
+                    <div class="product" data-id="1" data-name="Wireless mouse" data-price="25">
+                        <h2>Logitech Wireless Mouse</h2>
+                        <img src="assets1/images/logitech_mouse.jpg" alt="Wireless mouse" width="auto ">
+                        <p>$25</p>
+                        <button onclick="buy">Buy</button>
+                        <button onclick="addToCart(1, 'Wireless mouse', 25, 'assets1/images/logitech_mouse.jpg')">Add to
+                            Cart</button>
+
+                    </div>
+                    <div class="product" data-id="2" data-name="Logitech Keyboard" data-price="45">
+                        <h2>keyboard and mouse combo</h2>
+                        <img src="assets1/images/gaming_kb1.jpg" alt="Logitech Keyboard" width="250px">
+                        <p>$50</p>
+                        <button onclick="buy">Buy</button>
+                        <button onclick="addToCart(2, 'Logitech Keyboard', 45,'assets1/images/gaming_kb1.jpg')">Add to Cart</button>
+                    </div>
+                    <div class="product" data-id="3" data-name="Logitech Webcam" data-price="60">
+                        <h2>Logitech Webcam</h2>
+                        <img src="assets1/logi_webcam.jpg" alt="Logitech Webcam" width="250px">
+                        <p>$60</p>
+                        <button onclick="buy">Buy</button>
+                        <button onclick="addToCart(3, 'Logitech Webcam', 60,'assets1/logi_webcam.jpg')">Add to Cart</button>
+                    </div>
+                    <div class="product" data-id="4" data-name="Logitech Headset" data-price="80">
+                        <h2>Logitech Headset</h2>
+                        <img src="assets1/logi_headset.jpg" alt="Logitech Headset">
+                        <p>$80</p>
+                        <button onclick="buy">Buy</button>
+                        <button onclick="addToCart(4, 'Logitech Headset', 80,'assets1/logi_headset.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <h3 id="hp">
+                    <center>Zerbonics</center>
+                </h3>
+                <div class="product-container">
+                    <div class="product" data-id="5" data-name="Wireless Mouse" data-price="25"
+                        data-brand="Zerbonics">
+                        <h2> Wireless Mouse</h2>
+                        <img src="assets1/images/wireless_mouse.jpg" alt=" Wireless Mouse" width="250px">
+                        <p>$35</p>
+                        <button onclick="buy">Buy</button>
+                        <button
+                            onclick="addToCart(5, 'Wireless Mouse', 35, 'assets1/images/wireless_mouse.jpg', 'Zerbonics')">Add
+                            to Cart</button>
+                    </div>
+
+                    <div class="product" data-id="6" data-name="Wired mouse" data-price="45">
+                        <h2>Mouse</h2>
+                        <img src="assets1/images/mouse_wired.jpg" width="100px" alt="Wired mouse">
+                        <br><br><br><br><p>$45</p>
+                        <button onclick="buy">Buy</button>
+                        <button onclick="addToCart(6, 'Wired mouse', 45,'assets1/images/mouse_wired.jpg')">Add to Cart</button>
+                    </div>
+                    <div class="product" data-id="7" data-name="Zerbonics lap bag" data-price="80">
+                        <h2>Bag</h2>
+                        <img src="assets1/images/z_bags.jpg" width="200px" alt="Zerbonics lap bag">
+                        <p>$80</p>
+                        <button onclick="buy">Buy</button>
+                        <button onclick="addToCart(7, 'Zerbonics lap bag', 80,'assets1/images/z_bags.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <h3 id="asus" align="center">Asus</h3>
+          
+                <div class="product-container">
+                    <div class="product" data-id="8" data-name="keyboard protector" data-price="25">
+                        <h2>protector keyboard screen</h2>
+                        <img src="assets1/images/silicon.jpg" alt="keyboard protector">
+                        <p>$10</p>
+                        <button onclick="buy">Buy</button>
+                        <button onclick="addToCart(8, 'keyboard protector', 200, 'assets1/images/silicon.jpg')">Add to
+                            Cart</button>
+
+                    </div>
+                    <div class="product" data-id="9" data-name="Asus charger" data-price="45">
+                        <h2>Asus charger</h2>
+                        <img src="assets1/images/asus_charger.jpg" width="200px" alt="Asus chargerr">
+                        <p> $18 </p>
+                        <button onclick="buy">Buy</button>
+                        <button onclick="addToCart(9, 'Asus charger', 45,'assets1/images/asus_charger.jpg')">Add to Cart</button>
+                    </div>
+                    <div class="product" data-id="10" data-name="Bags="60">
+                        <h2>Asus bags</h2>
+                        <img src="assets1/images/Asus_bags.jpg" width="200px" alt="Bags">
+                        <p>$60</p>
+                        <button onclick="buy">Buy</button>
+                        <button onclick="addToCart(10, 'Bags', 60,'assets1/images/Asus_bags.jpg')">Add to Cart</button>
+                    </div>
+
+                </div>
+            </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <section class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p id="about">A leading e-commerce platform offering high-quality products with exceptional customer service.</p>
+                <br><br>
+            </div>
+
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <ul><a href="#">Contact Us</a></li>
+                        <ul><a href="#">Shipping Policy</a></li>
+                            <ul><a href="#">Returns & Exchanges</a></li>
+                            </ul>
+                            <br><br>
+            </div>
+            <br><br>
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <ul class="social-links">
+                    <ul><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+                        <ul><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+                            <ul><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+                            </ul>
+                            <br><br>
+            </div>
+        </section>
+        <h3 id="other accessories"> </h3>
+
+
+        <!-- Existing brand categories -->
+
+        <h3 id="other-accessories">Other Accessories</h3>
+        <div class="product-container">
+            <div class="product" data-id="21" data-name="Laptop Stand" data-price="12">
+                <h2>Laptop Stand</h2>
+                <p>$12</p>
+                <img src="assets1/images/stand.jpg" lalt="stand">
+                <button onclick="buy">Buy</button>
+                <button onclick="addToCart(21, 'Laptop Stand', 12,'assets1/images/stand.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-id="22" data-name="HDMI Cable" data-price="9">
+                <h2>HDMI Cable</h2>
+
+                <img src="assets1/images/hdmi.jpg" lalt="stand">
+                <p>$9</p>
+                <button onclick="buy">Buy</button>
+                <button onclick="addToCart(22, 'HDMI Cable', 9,'assets1/images/hdmi.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-id="23" data-name="SD Card" data-price="20">
+                <h2>Tp-link Dongal</h2>
+                <img src="assets1/images/dongal.jpg" lalt="stand">
+                <p>$14</p>
+                <button onclick="buy">Buy</button>
+                <button onclick="addToCart(23, 'SD Card', 14,'assets1/images/dongal.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-id="24" data-name="Power Bank" data-price="25">
+                <h2>Power Bank</h2>
+
+                <img src="assets1/images/powerbank.jpg" lalt="stand">
+                <p>$20</p>
+                <button onclick="buy">Buy</button>
+                <button onclick="addToCart(24, 'Power Bank', 20,'assets1/images/powerbank.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 The RAYEEN'S Store. All rights reserved.</p>
+        </div>
+        <br><br>
+    </footer>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
