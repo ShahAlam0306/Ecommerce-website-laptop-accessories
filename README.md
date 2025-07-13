@@ -25,4 +25,39 @@
 ---
 
 ## 📁 Folder Structure
+1) Required images u can download from assets1 folder
+2) Make sure to download the file in correct format
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Font Awesome (for icons)
+- LocalStorage API
+
+---
+
+## 🚀 How to Run
+
+1. Clone or download the repository
+2. Ensure all files (`.html`, `.css`, `.js`) are in the same directory
+3. Open `index.html` in a browser to explore the store
+4. Add items to cart and view them in `cart.html`
+5. Use `contact.html` to test the contact form
+
+---
+
+## 📌 Future Improvements
+
+- Integrate a payment gateway for checkout
+- Store form submissions to backend (e.g. Firebase or Node.js)
+- Admin dashboard for product management
+- User login/authentication
+
+
+
+
 
